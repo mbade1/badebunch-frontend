@@ -4,22 +4,53 @@ class Clicker extends React.Component {
     constructor() {
         super()
         this.state = { counter: 0 }
-        this.handleClick = this.handleClick.bind(this);
+        this.handleClickPlusOne = this.handleClickPlusOne.bind(this);
+        this.handleClickMinusOne = this.handleClickMinusOne.bind(this);
+        this.handleClickSquared = this.handleClickSquared.bind(this);
+        this.handleKeyDown = this.handleKeyDown.bind(this);
     }
 
-    handleClick(event) {
+    handleClickPlusOne(event) {
         debugger
         this.setState({
             counter: this.state.counter + 1
         })
+    }
+    handleClickMinusOne(event) {
+        this.setState({
+            counter: this.state.counter - 1
+        })
+    }
+    handleClickSquared(event) {
+        this.setState({
+            counter: this.state.counter * this.state.counter
+        })
+    }
+
+    handleKeyDown(event) {
+        debugger
+        console.log(event.keyCode)
     }
 
     render() {
         return (
             <div>
                 Clicker Comp
-                <button onClick={this.handleClick}>Click me!</button>
+                <br/>
+                <button onClick={this.handleClickPlusOne}>+</button>
+                <button onClick={this.handleClickMinusOne}>-</button>
+                <button onClick={this.handleClickSquared}>**</button>
+
                 <br/>{this.state.counter}
+
+                <br/><br/><br/><br/>
+                <div className="game" onKeyDown={this.handleKeyDown}>
+                    <div id="dodger" >
+
+                    </div>
+                </div>
+                
+
             </div>
         )
     }

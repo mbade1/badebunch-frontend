@@ -11,3 +11,19 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.game {
+  background-color: #000;
+  width: 500px;
+  height: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#dodger {
+  margin: auto;
+  width: 200px;
+  height: 200px;
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSAA56AtikUiyiBNXeChQ3O7c6hcSmTnreSFw&usqp=CAU');
+  object-fit: scale-down;
+}
